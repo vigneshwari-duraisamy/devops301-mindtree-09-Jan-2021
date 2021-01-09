@@ -1,0 +1,32 @@
+    1  ls
+    2  ip addr 
+    3  route -n 
+    4  ping google.com
+    5  ping -I enp0s8 google.com
+    6  ping -I enp0s3 google.com
+    7  ls
+    8  git --version 
+    9  git clone https://github.com/amitvashisttech/devops301-mindtree-09-Jan-2021.git
+   10  ls
+   11  cd devops301-mindtree-09-Jan-2021/
+   12  ls
+   13  git branch 
+   14  git config 
+   15  git config --global --list 
+   16  git config --global user.name "Amit Vashist"
+   17  git config --global user.email "amitvashist7@outlook.com"
+   18  git config --global user.editor vi 
+   19  git config --global help.autocorrect 1
+   20  git config --global --list 
+   21  ls
+   22  cd 
+   23  cat .gitconfig 
+   24  ls
+   25  cd devops301-mindtree-09-Jan-2021/
+   26  ls
+   27  vim README.md 
+   28  ls
+   29  git add . ; git commit -m "Updated: Readme"; git push 
+   30  git config credentials.helper store 
+   31  history 
+   32  history > History.txt
