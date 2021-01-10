@@ -3,7 +3,8 @@ node {
     def server = Artifactory.server "01"
     def buildInfo = Artifactory.newBuildInfo() 
 
-def project_path = "01-Jenkins/petclinic-code"
+// Project Dir
+    def project_path = "01-Jenkins/petclinic-code"
 
 
 stage('GitCheckOut') {
@@ -35,7 +36,7 @@ stage('Build Managment') {
 	 "files": [
 	{
 	"pattern": "**/*.war",
-	"target": "petclinic-snapshots"
+	"target": "petclinic-war"
         }
 	]
 	}"""
