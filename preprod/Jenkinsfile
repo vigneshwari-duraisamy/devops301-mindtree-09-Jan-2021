@@ -53,8 +53,4 @@ sh 'docker-compose up -d --build'
 }
 }
 
-stage('Deployment - Stage'){
- deploy adapters: [tomcat8(credentialsId: '02', path: '', url: 'http://172.31.0.201:8080/')], contextPath: 'petclinic', onFailure: false, war: '01-Jenkins/petclinic-code/target/petclinic.war'
-}
- 
 }
