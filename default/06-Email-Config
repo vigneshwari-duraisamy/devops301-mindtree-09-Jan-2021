@@ -1,8 +1,6 @@
 node {
 
 notify('Started')
-
-try {
 // Project Dir
     def project_path = "01-Jenkins/petclinic-code"
 
@@ -33,11 +31,7 @@ sh 'mvn package'
 
 }
 
-}
-  notify('Completed')
-} catch(err) {
-  notify("Error ${err}")
-  currentBuild.result = 'FAILURE'
+notify('Completed')
 }
 
 
