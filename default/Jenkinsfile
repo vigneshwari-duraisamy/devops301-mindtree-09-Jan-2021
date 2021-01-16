@@ -1,6 +1,9 @@
 node {
 
 notify('Started')
+
+try {
+
 // Project Dir
     def project_path = "01-Jenkins/petclinic-code"
 stage('GitCheckOut') {
@@ -23,6 +26,8 @@ sh 'mvn test'
 
 stage('Maven pkg') {
 sh 'mvn package'
+}
+
 }
 
 
