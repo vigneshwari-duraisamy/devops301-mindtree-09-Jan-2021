@@ -17,7 +17,7 @@ sh 'mvn clean'
 }
 
 stage('Maven Compile') {
-sh 'mvn compile'
+sh 'mvn compiles'
 }
 
 stage('Maven test') {
