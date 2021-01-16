@@ -1,17 +1,11 @@
 node {
 
 notify('Started')
-
-try {
 // Project Dir
     def project_path = "01-Jenkins/petclinic-code"
-
-
 stage('GitCheckOut') {
 git branch: 'main', credentialsId: '01', url: 'https://github.com/amitvashisttech/devops301-mindtree-09-Jan-2021.git'
 }
-
-
 
 dir(project_path){
 
@@ -31,15 +25,13 @@ stage('Maven pkg') {
 sh 'mvn package'
 }
 
-}
 
-}
   notify('Completed')
 } catch(err) {
   notify("Error ${err}")
   currentBuild.result = 'FAILURE'
+ }
 }
-
 
 def notify(status){
     emailext(
@@ -49,3 +41,4 @@ def notify(status){
             <p>Check Console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
     )
 }
+
