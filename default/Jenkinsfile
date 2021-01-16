@@ -27,7 +27,7 @@ sh 'mvn package'
 
 
   notify('Completed')
-} catch(err) {
+} catch(err){
   notify("Error ${err}")
   currentBuild.result = 'FAILURE'
  }
